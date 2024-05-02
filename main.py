@@ -8,12 +8,12 @@ bot = telebot.TeleBot(API_KEY)
 
 @bot.message_handler(commands=["Start"])
 def hello_func(message):
-    bot.send_message(message.from_user.id, 'Hi, ver 3')
+    bot.send_message(message.from_user.id, 'Hi, ver 4')
     req = requests.get(URL)
     print(req.status_code)
     bot.send_message(message.from_user.id, req.status_code)
     for i in range(6*60*24*5):
-        timeToSleep = 600
+        timeToSleep = 60
         time.sleep(timeToSleep)
         bot.send_message(user_id, str(timeToSleep) +" sec")
 
