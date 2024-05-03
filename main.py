@@ -16,7 +16,7 @@ def hello_func(message):
     for i in range(6*60*24*5):
         req = requests.get(URL)
         print(req.status_code)
-        timeToSleep = 60
+        timeToSleep = 600
         bot.send_message(message.from_user.id, 'Request status: ' + str(req.status_code) + ' Time :' + str(timeToSleep) + 'sec' )
 
         time.sleep(timeToSleep)
